@@ -8,22 +8,18 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    @IBOutlet weak var ContainerView: UIView!
+    @IBOutlet weak var showView: UIView!
+    @IBOutlet weak var backHome: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        ContainerView.backgroundColor = UIColor(red: 0.11, green: 0.13, blue: 0.21, alpha: 1.00)
+        
+        showView.backgroundColor = UIColor(red: 0.20, green: 0.20, blue: 0.27, alpha: 1.00)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+}
+extension UIViewController{
+    @IBAction func backHome(_ segue: UIStoryboardSegue) {}
 }
